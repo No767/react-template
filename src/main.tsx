@@ -1,11 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
+import ReactDOM from "react-dom/client";
+import "./App.tsx";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 
-// biome-ignore lint/style/noNonNullAssertion: Default provided by react
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+import App from "./App.tsx";
+import { routeTree } from "./routeTree.gen";
+
+// biome-ignore lint/style/noNonNullAssertion: Provided by React
+const rootElement = document.getElementById("root")!;
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
+}

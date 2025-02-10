@@ -10,14 +10,25 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "auto",
-    "ignore": ["**/node_modules/", "**/.vscode/", "**/.idea", "**/public/"]
+    "ignore": [
+      "**/node_modules/",
+      "**/.vscode/",
+      "**/.idea",
+      "**/public/",
+      "src/routeTree.gen.ts"
+    ]
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true
     },
-    "ignore": ["**/node_modules/", "**/dist", "**/.eslintrc.cjs"]
+    "ignore": [
+      "**/node_modules/",
+      "**/dist",
+      "**/.eslintrc.cjs",
+      "src/routeTree.gen.ts"
+    ]
   },
   "organizeImports": { "enabled": true },
   "json": {
