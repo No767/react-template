@@ -2,9 +2,9 @@ import Home from "./pages/home.tsx";
 function App() {
   return (
     <>
-    <Home/>
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
